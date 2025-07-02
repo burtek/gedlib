@@ -1,0 +1,34 @@
+{
+  "name": "@dtrw/gedlib",
+  "version": "0.1.0",
+  "description": "GEDCOM parser and serializer library for JavaScript",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": "git@github.com:burtek/gedlib.git",
+  "author": "Bartosz <burtekdotryw@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "build:types": "tsc --emitDeclarationOnly",
+    "dev": "rollup -c -w"
+  },
+  "dependencies": {
+    "gedcom": "3.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "rollup": "^4.44.1",
+    "rollup-plugin-dts": "^6.2.1",
+    "typescript": "^5.8.3"
+  }
+}
